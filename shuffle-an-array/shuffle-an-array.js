@@ -17,17 +17,25 @@ Solution.prototype.reset = function() {
  */
 Solution.prototype.shuffle = function() {
     
-    var a = [];
-    this.nums.forEach((val, key) => a[key] = val); // need to copy key value one by one
+    let arr = []
+    this.nums.forEach(ele => arr.push(ele))
     
-    for (var i = 0; i < a.length; i++) {
-        var rand = Math.floor(Math.random() * (a.length - i)) + i; // be careful to get the floor of random
-        var tmp = a[i];
-        a[i] = a[rand];
-        a[rand] = tmp;
+
+
+        // var rand = Math.floor(Math.random() * (a.length - i)) + i
+
+
+    
+
+    
+    for (let i=0; i < arr.length; i++) {
+        let randomIndex = Math.floor(Math.random() * arr.length)
+        let temp = arr[i]
+        arr[i] = arr[randomIndex]
+        arr[randomIndex] = temp
     }
-    return a;
     
+    return arr
     
 };
 
