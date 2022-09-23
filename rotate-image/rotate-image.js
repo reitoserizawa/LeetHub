@@ -4,6 +4,7 @@
  */
 var rotate = function(matrix) {
     
+    const matNum = matrix.length
     let mat0Leng = matrix[0].length
     let matLeng = matrix.length - 1
     
@@ -19,6 +20,6 @@ var rotate = function(matrix) {
         rowArr = []
     }
     
-    matrix.splice(0, matrix.length/2)
+    matrix.splice(0, matNum)
     
 }
