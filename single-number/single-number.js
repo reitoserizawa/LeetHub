@@ -13,7 +13,7 @@ var singleNumber = function(nums) {
             seen.push(nums[i])
         } else if (seen.includes(nums[i])) {
             seen.push(nums[i])
-        } else if (!seen.includes(nums[i]) && nums[i] !== nums[i+1]) {
+        } else {
             return nums[i]
         }
         
