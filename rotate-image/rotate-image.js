@@ -4,16 +4,15 @@
  */
 var rotate = function(matrix) {
     
-    const newMatrix = matrix
-    let mat0Leng = newMatrix[0].length
-    let matLeng = newMatrix.length - 1
+    let mat0Leng = matrix[0].length
+    let matLeng = matrix.length - 1
     
     let rowArr = []
 
     for (let eleIn = 0; eleIn < mat0Leng; eleIn ++) {
     
         for (let i = matLeng; i >= 0; i--) {
-            rowArr.push(newMatrix[i][eleIn])
+            rowArr.push(matrix[i][eleIn])
         }
     
         matrix.push(rowArr)
